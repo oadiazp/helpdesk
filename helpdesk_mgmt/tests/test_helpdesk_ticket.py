@@ -29,7 +29,7 @@ class TestHelpdeskTicket(TestHelpdeskTicketBase):
         self.assertEqual(ticket_b.company_id, self.company)
 
     def test_helpdesk_ticket_team_company_extra(self):
-        company = self.env["res.company"].create({"name": "Test company"})
+        company = self.env["res.company"].create({"name": "Test company", "fiscal_last_year": 2023})
         team = self.env["helpdesk.ticket.team"].create(
             {"name": "Test team", "company_id": False}
         )
